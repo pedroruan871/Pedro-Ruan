@@ -27,7 +27,7 @@ int main(void)
     }
 }
 
-// pra pega a altura do bagulho
+// pra pegar a altura
 int high(void)
 {
     int h;
