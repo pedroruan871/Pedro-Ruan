@@ -1,0 +1,11 @@
+for i in range(len(readed)):
+            #TTTTTTCT count
+            if readed[i:i+8] == 'TTTTTTCT':
+                if readed[i-8:i] == 'TTTTTTCT':
+                    TTTTTTCT += 1
+                    tmp1 += 1
+                else:
+                    tmp1 = 1
+                if tmp1 < TTTTTTCT:
+                    TTTTTTCT = tmp1
+                i += 8
