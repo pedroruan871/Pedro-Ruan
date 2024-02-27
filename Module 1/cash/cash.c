@@ -3,6 +3,6 @@
 
 int main(void)
 {
-    float reixpoxta= get_float("Quantos reais ce tem\n");
-    printf("pegue %f\n", reixpoxta);
+    float answer= get_float("Quantos reais você tem\n");
+    printf("pegue %f\n", answer);
 }
