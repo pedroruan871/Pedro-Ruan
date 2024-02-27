@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table table-bordered">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Symbol</th>
+        <th scope="col">Price</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Time</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for i in history: %}
+            <tr>
+                <td class="{{'red' if i['type'] == 'sell' else 'green'}}">{{ i['type'] }}</td>
+                <td>{{ i['symbol'] }}</td>
+                <td>{{ (i['price']*i['shares'])|usd }}</td>
+                <td>{{ i['shares'] }}</td>
+                <td>{{ i['time'] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

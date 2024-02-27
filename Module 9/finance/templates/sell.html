@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+<form action="/sell" method="post">
+    <select name="symbol" style="vertical-align: middle;" class="form-control">
+        <option disabled selected value="">SYMBOL</option>
+        {% for i in range(stocksInf | length) %}
+            <option value="{{ stocksInf[i]['symbol'] }}">{{ stocksInf[i]['symbol']}}</option>
+        {% endfor %}
+    </select>
+    <input style="vertical-align: middle;" autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number" min="1">
+    <button class="btn btn-primary" type="submit">SELL</button>
+</form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h3 style="text-align: left;">Hello, {{ userInf[0]['username'] }}</h3>
+    <p></p>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Cash: {{ userInf[0]['cash']|usd }}</th>
+            <th scope="col">Total owned: {{ network|usd }}</th>
+        </tr>
+        </thead>
+    </table>
+    <h3 style="text-align: left;">Your stocks:</h3>
+    <p></p>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for i in stocksInf: %}
+                <tr>
+                    <td>{{ i['symbol'] }}</td>
+                    <td>{{ (i['symbol']|lookup)['name'] }}</td>
+                    <td>{{ i['shares'] }}</td>
+                    <td>{{ (i['symbol']|lookup)['price']|usd }}</td>
+                    <td>{{ ((i['symbol']|lookup)['price']*i['shares'])|usd }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

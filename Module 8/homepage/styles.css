@@ -1,0 +1,26 @@
+.square
+{
+    width: auto;
+    height: 200px;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
+}
+.background
+{
+    background-color: #a6aaed
+}
+.textbackground
+{
+    background-color: #ffffff;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    text-size: big;
+}
+.heading
+{
+    font-size: large;
+    text-align: center;
+}

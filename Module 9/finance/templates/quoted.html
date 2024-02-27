@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ stksym['symbol'] }}</td>
+            <td>{{ stksym['name'] }}</td>
+            <td>{{ stksym['price']|usd }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

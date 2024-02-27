@@ -1,0 +1,1 @@
+INSERT INTO birthdays (name, month, day) VALUES (?,?,?)
