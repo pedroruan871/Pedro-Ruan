@@ -12,14 +12,14 @@ int main(void)
      // TODO: Solicite o valor inicial ao usuário
     do
     {
-        n = get_int("Quanto eh a populacao inicial?\n");
+        n = get_int("Quanto é a população inicial?\n");
     }
     while (n < 9);
 
      // TODO: Solicite o valor final ao usuário
     do
     {
-        m = get_int("Quanto eh a populacao final?\n");
+        m = get_int("Quanto é a população final?\n");
     }
     while (m < n);
 
@@ -38,5 +38,5 @@ int main(void)
     while (n < m);
 
       // TODO: Imprima o número de anos
-        printf("levarao %i\n", y);
+        printf("Levarão %i anos\n", y);
 }
