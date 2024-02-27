@@ -1,0 +1,14 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Na tabela que fiz eu anotei os testes de todos os metodos de sort e comparei o pior caso(reversed) com o melhor(sorted),
+de acordo com o Big O e o Big Ω, o bubble sort vai ter a maior diferença entre o pior e melhor caso, que é o sort1.
+
+sort2 uses: Merge Sort
+
+How do you know?: Comparando as tabelas, o Merge sort vai ter valores proximos mas ainda vão ser menores que o selection sort e bubble sort,
+desse jeito eu acabei realizando que o método que apresenta essas pripriedades é o sort2.
+
+sort3 uses: Selection Sort
+
+How do you know?: Utilizei a mesma metodologia do Merge sort e, além de ser o que sobrou, os valores aproximadamente iguais são maiores que
+o pior e o melhor caso do sort2.
